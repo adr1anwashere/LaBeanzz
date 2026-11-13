@@ -26,6 +26,9 @@ class Supplier(db.Model):
     )
 
     user = db.relationship("User", back_populates="supplier_profile")
+    coffee_beans = db.relationship(
+        "CoffeeBean", back_populates="supplier", cascade="all, delete-orphan"
+    )
 
     def to_dict(self):
         return {
