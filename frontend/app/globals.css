@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+/* ─── LaBeans design tokens ─────────────────────────────────────────────── */
+:root {
+  /* Brand */
+  --color-brand-50:  #fdf8f0;
+  --color-brand-100: #f9edda;
+  --color-brand-200: #f2d9b0;
+  --color-brand-300: #e8bf7e;
+  --color-brand-400: #dca04a;
+  --color-brand-500: #c47f27;   /* primary */
+  --color-brand-600: #a56520;
+  --color-brand-700: #854e1a;
+  --color-brand-800: #643a14;
+  --color-brand-900: #42250d;
+
+  /* Neutrals */
+  --color-surface:   #ffffff;
+  --color-surface-2: #f7f4f0;
+  --color-surface-3: #ede8e1;
+  --color-border:    #d8d0c5;
+  --color-text:      #1a1410;
+  --color-text-2:    #5a5248;
+  --color-text-3:    #9c9087;
+
+  /* Semantic */
+  --color-success:   #2d7a4f;
+  --color-warning:   #b45309;
+  --color-danger:    #c0392b;
+  --color-info:      #1d6fa4;
+
+  /* Layout */
+  --radius-sm:  4px;
+  --radius-md:  8px;
+  --radius-lg:  12px;
+  --radius-xl:  16px;
+  --radius-full: 9999px;
+
+  /* Typography */
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+@theme inline {
+  --color-background: var(--color-surface);
+  --color-foreground: var(--color-text);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  /* Expose brand scale to Tailwind utilities */
+  --color-brand-50:  var(--color-brand-50);
+  --color-brand-100: var(--color-brand-100);
+  --color-brand-200: var(--color-brand-200);
+  --color-brand-300: var(--color-brand-300);
+  --color-brand-400: var(--color-brand-400);
+  --color-brand-500: var(--color-brand-500);
+  --color-brand-600: var(--color-brand-600);
+  --color-brand-700: var(--color-brand-700);
+  --color-brand-800: var(--color-brand-800);
+  --color-brand-900: var(--color-brand-900);
+
+  --color-surface:   var(--color-surface);
+  --color-surface-2: var(--color-surface-2);
+  --color-surface-3: var(--color-surface-3);
+  --color-border:    var(--color-border);
+  --color-text:      var(--color-text);
+  --color-text-2:    var(--color-text-2);
+  --color-text-3:    var(--color-text-3);
+
+  --color-success:   var(--color-success);
+  --color-warning:   var(--color-warning);
+  --color-danger:    var(--color-danger);
+  --color-info:      var(--color-info);
+
+  --radius-sm:   var(--radius-sm);
+  --radius-md:   var(--radius-md);
+  --radius-lg:   var(--radius-lg);
+  --radius-xl:   var(--radius-xl);
+  --radius-full: var(--radius-full);
+}
+
+/* Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
